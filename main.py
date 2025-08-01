@@ -20,7 +20,7 @@ def get_geolocation():
         g = geocoder.ip('me')
         return f"{g.city}, {g.state}, {g.country}"
     except Exception as e:
-        print(f"Error getting geolocation: {e}")
+        return "Location unavailable"
         return "Unknown location"
 
 def send_email(subject, message, from_addr, to_addr, password):
