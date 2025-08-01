@@ -34,6 +34,7 @@ def send_email(subject, message, from_addr, to_addr, password):
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as server:
             server.login(from_addr, password)
             server.send_message(msg)
+            print("Emergency email sent successfully!")
     except Exception as e:
         print(f"Error sending email: {e}")
 
